@@ -13,7 +13,7 @@ import com.luckermt.hello.Service.HelloService;
 @RequestMapping("/api")
 public class HelloController {
     
-    @GetMapping("/")
+    @GetMapping("/hello")
     @ResponseStatus(HttpStatus.OK)
     public String hola() {
         return HelloService.getHello();
