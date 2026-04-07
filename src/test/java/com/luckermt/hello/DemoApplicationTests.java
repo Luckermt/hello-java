@@ -9,7 +9,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.luckermt.hello.Controller.HelloController;
 
-@WebMvcTest(HelloController.class)  // указываете ваш контроллер
+@WebMvcTest(HelloController.class)
 public class DemoApplicationTests {
 
     @Autowired
