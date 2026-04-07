@@ -8,8 +8,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.luckermt.hello.Controller.HelloController;
+import com.luckermt.hello.Service.HelloService;
 
-@WebMvcTest(HelloController.class)  // указываете ваш контроллер
+@WebMvcTest(HelloController.class)
 public class DemoApplicationTests {
 
     @Autowired
@@ -20,4 +21,9 @@ public class DemoApplicationTests {
         mockMvc.perform(get("/api/hello"))
         .andExpect(status().isOk());
     }
+    @Test
+    void testHello() throws Exception {
+        HelloService.getHello();
+    }
 }
+
